@@ -5,7 +5,8 @@ while True:
   print ("2. Add Tasks")
   print ("3.Remove Tasks")
   print ("4.Exit")
-  selection = int(input("Choose your option 1-4 "))
+  print("5.Edit a Task")
+  selection = int(input("Choose your option 1-5 "))
 
   if selection == 1:
     if len(list1) ==0:
@@ -32,7 +33,13 @@ while True:
     print("Exiting the app")
     break
 
-  
+  elif selection ==5:
+    if len(list1)==0:
+      print("No task to edit")
+    else:
+     taskedit = input("What task to edit ") 
+     index1 = list1.index(taskedit)
+     updated = input("Enter the data task ")
+     list1[index1] = updated
+     print ("task updated") 
 
-  
- 
